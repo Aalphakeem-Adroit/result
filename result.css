@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", serif;
+}
+
+:root {
+    /* primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    
+    /* gradient */
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Pale-blue);
+}
+
+.two-columns {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    background-color: var(--White);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 var(--Persian-blue-circle), 0 6px 20px 0 var(--Persian-blue-circle);
+}
+
+.first-column {
+    background-image: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    border-radius: 25px;
+    width: 50%;
+}
+
+.value {
+    background-image: linear-gradient(var(--Violet-blue-circle), var(--Light-royal-blue-background));
+    padding: 20%;
+    border-radius: 100%;
+}
+
+.first-column > h2 {
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1,
+.comment > h2 {
+    color: var(--White);
+}
+
+.comment > h2 {
+    margin-bottom: 10px;
+}
+
+
+.comment > p {
+    font-size: 18px;
+}
+
+.value > p,
+.comment > p,
+.first-column > h2 {
+    color: var(--Pale-blue);
+}
+
+.second-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.result-breakdown {
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.list1 {
+    background-color: hsl(0, 100%, 67%, 0.1);
+    margin-bottom: 15px
+}
+
+.item1 {
+    color: var(--Light-red);
+}
+
+.list2 {
+    background-color: hsl(39, 100%, 56%, 0.1);
+    margin-bottom: 15px;
+}
+
+.item2 {
+    color: var(--Orangey-yellow);
+}
+
+.list3 {
+    background-color: hsl(166, 100%, 37%, 0.1);
+    margin-bottom: 15px;
+}
+
+.item3 {
+    color: var(--Green-teal);
+}
+
+.list4 {
+    background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.item4 {
+    color: var(--Cobalt-blue);
+}
+
+.group-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.group-list > img {
+    margin-right: 10px;
+}
+
+.main-score {
+    font-weight: 700;
+    color: var(--Dark-gray-blue);
+}
+
+.score-overall {
+    margin-left: 10px;
+    font-weight: 700;
+    color: var(--Dark-gray-blue);
+    opacity: .3;
+}
+
+
+button {
+    width: 100%;
+    border-radius: 50px;
+    border: 0px solid transparent;
+    padding: 15px;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+}
+
+button:hover {
+    background-image: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+}
+
+@media only screen and (max-width: 450px) {
+    .two-columns {
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    .first-column {
+        border-radius: 0 0 25px 25px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .second-column {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .value {
+        padding: 15%;
+    }
+
+    .list {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .list {
+        padding: 10px;
+    }
+}
